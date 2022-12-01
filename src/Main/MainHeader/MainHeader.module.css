@@ -1,0 +1,172 @@
+.left{
+    width: calc(30% - 25px);
+    background: var(--grey-block);
+    padding: 20px;
+    padding-top: 10px;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+}
+
+.left.light{
+    background: white;
+}
+
+.leftTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.deg{
+    font-weight: 500;
+    font-size: 96px;
+    color: var(--blue);
+}
+
+.today{
+    font-weight: 400;
+    font-size: 40px;
+    
+}
+
+.infoText{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--grey-text);
+    margin-bottom: 14px;
+}
+
+.infoText:last-of-type{
+    margin-bottom: 0;
+}
+
+.mainHeader{
+    display: flex;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.right{
+    width: calc(70% - 25px);
+    background: var(--grey-block);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 42px 0 42px 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.right.light{
+    background: white;
+}
+.right::before{
+    content: url(../../assets/Icons/Cloud.png);
+    position: absolute;
+    width: 60%;
+    height: 66%;
+    right: -136px;
+    top: 0;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.circle{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+
+}
+
+.category{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--grey-text);
+    width: 91px;
+}
+
+.categoryValue{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.logo{
+    width: 80%;
+}
+.iconWeather{
+
+}
+
+
+
+@media (max-width: 1200px) {
+    .today{
+        font-size: 25px;
+    }
+    .deg{
+        font-size: 80px;
+    }
+    .right::before{
+        padding-right: 80px;
+    }
+    
+} 
+
+@media (max-width: 1024px) {
+    .iconWeather{
+        width: 50%;
+    }
+}
+@media (max-width: 768px) {
+    .iconWeather{
+        width: 40%;
+    }
+    .today{
+        font-size: 20px;
+    }
+    .deg{
+        font-size: 70px;
+    }
+   
+    .infoText{
+        font-size: 20px;
+    }
+}
+@media (max-width: 480px){
+    .mainHeader{
+        flex-wrap: wrap;
+    }
+    .left{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .right{
+        width: 100%;
+    }
+}
+@media (max-width: 320px){
+    .circle{
+        display: none;
+    }
+    .right::before{
+        display: none;
+    }
+}
