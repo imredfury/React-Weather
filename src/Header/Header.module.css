@@ -28,6 +28,8 @@
     display: flex;
     column-gap: 25px;
     align-items: center;
+    position: relative;
+
 }
 
 .form{
@@ -75,6 +77,24 @@
 .them.light svg path{
     fill: #000;
 }
+
+.block{
+    padding-top: 10px;
+    position: absolute;
+    left: 14%;
+    top: 90%;
+    z-index: 20;
+    
+}
+.item{
+    font-size: 18px;
+    background-color: grey;
+    border-radius: 8px;
+    margin: 8px;
+    padding: 6px;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .logo{
         width: 20%;

@@ -23,6 +23,7 @@ const [isLight, setIsLight] = useState(false);
         setDate(data.list[0].dt_txt.slice(0, 10))
       })
   }
+  
   useEffect(() => {
     function getLocation() {
       if (navigator.geolocation) {
