@@ -88,7 +88,7 @@
 }
 .item{
     font-size: 18px;
-    background-color: grey;
+    background-color: rgba(182, 182, 182, 0.299);
     border-radius: 8px;
     margin: 8px;
     padding: 6px;

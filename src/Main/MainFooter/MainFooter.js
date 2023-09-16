@@ -29,7 +29,7 @@ return (
                     {fiveDays.filter((item) => item.dt_txt.includes(date))
                         .map((item) => (
 
-                            <div className={`${card} ${isLight ? light : ''}`} key={item.dt_txt}>
+                        <div className={`${card} ${isLight ? light : ''}`} key={item.dt_txt}>
                         <h3 className={cardTitle}>{item.dt_txt.slice(11, 16)}</h3>
                         <img className={styles.iconFooter} src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt='Icon weather'/>
                         <p className={cardTempMax}>{(item.main.temp_max - 273.15).toFixed()}°C</p>

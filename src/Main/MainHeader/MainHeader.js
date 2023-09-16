@@ -29,7 +29,9 @@ const MainHeader = ({current, isLight}) => {
             <div className={`${styles.left} ${isLight ? styles.light: ''}`}>
                 <div className={styles.leftTop}>
                     <div className={styles.leftTopLeft}>
+
                         <p className={styles.deg}>{(current.main.temp - 273.15).toFixed()}°</p>
+                        
                         <p className={styles.today}>Today</p>
                     </div>
                     <img className={styles.iconWeather} src={`http://openweathermap.org/img/wn/${current.weather[0].icon}@4x.png`} alt='Icon weather'/> 
