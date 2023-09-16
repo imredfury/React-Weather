@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './MainHeader.module.css'
 import TempIcon from '../../assets/Icons/thermometer.svg'
 import PressureIcon from '../../assets/Icons/humidity.svg'
@@ -6,6 +6,8 @@ import PrecipitationIcon from '../../assets/Icons/evaporator.svg'
 import WindIcon from '../../assets/Icons/wind.svg'
 
 const MainHeader = ({current, isLight}) => {
+
+    const [far, setFar] = useState(false);
 
     const addZero = (num) => {
         if (num < 10) return `0${num}`
@@ -22,15 +24,22 @@ const MainHeader = ({current, isLight}) => {
         return `${hours} : ${minutes}`
     
     };
-
+    // const changeFar = () => {
+    //     const changeDeg = far ? `{(current.main.temp - 273.15).toFixed()}°` : `{(current.main.temp ).toFixed()}°`
+    //     setFar(changeDeg)
+    // }
+ 
+    
 
     return (
         <div className={styles.mainHeader}>
             <div className={`${styles.left} ${isLight ? styles.light: ''}`}>
                 <div className={styles.leftTop}>
                     <div className={styles.leftTopLeft}>
-
-                        <p className={styles.deg}>{(current.main.temp - 273.15).toFixed()}°</p>
+                        
+                        <p className={styles.deg} onClick={() => setFar(!far)}>{
+                            far ? <span>{Math.round((current.main.temp - 273.15) * (9/5) + 32)}F°</span> : <span>{Math.round(current.main.temp - 273.15)} C°</span> 
+                        }</p>
                         
                         <p className={styles.today}>Today</p>
                     </div>
